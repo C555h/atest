@@ -9,7 +9,7 @@ and open the template in the editor.
         <meta charset="ISO-8859-1">
         <title></title>
     </head>
-    <body>ZZZZZZZZZZZZZ
+    <body>ZZZZZZZZZZZZZ2
         <?php
         // put your code here
         ?>
