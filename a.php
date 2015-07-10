@@ -22,7 +22,7 @@ var_dump($array_fill);
 
 $test = new Test();
 foreach ($test as $k => $value) {
-    echo "$k => $value <br>";
+    echo "Z$k => $value <br>";
 }
 
 
