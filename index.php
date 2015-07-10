@@ -1,3 +1,3 @@
 <?php
 
-echo "Z";
+echo "00";
