@@ -1,20 +1,61 @@
 <?php
-$a = [1,34,5];
+class Test {
+    
+    public $asd= 2;
+    public $qwe = 1;
 
-$sql = <<<SQL
-select *
-  from $tablename
- where id in [$order_ids_list]
-   and product_name = "widgets"
-SQL;
 
-$sql = "
-select *
-  from $tablename
- where id in [$order_ids_list]
-   and product_name = \"widgets\"
-";
+    public function __call($name, $arguments) {
+        echo $name, ' - ', method_exists($this, $name), 'Z <br>';
+    }
+    
+    
+    function testa() {
+        echo "testa";
+    }
 
-foreach ($a as $value) {
-    echo "$value";
 }
+
+$array_fill = array_fill(0, 3, new Test);
+$array_fill[0]->asd = 9;
+var_dump($array_fill);
+
+$test = new Test();
+foreach ($test as $k => $value) {
+    echo "$k => $value <br>";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+if (0) {
+    require './z/anotacao.php';
+    require './z/afazer.php';
+    require './z/dados.php';
+    require './z/exer.php';
+
+    require './js/js.php';
+    require './php.php';
+    require './all.php';
+}
+
+/**
+ * $this->pedido->numeroparcelas - parcela
+ * 
+ * Pedido calculaTotalValorItems - item
+ * Item calculaJuro - juro, parcela
+ * Parcela reajustaParcela - pedido, calculaTotalST
+ *      calculaTotalST - pedido->idprocesso, item->st, endereco->financiarST
+ * Item calculaImpostos - juro
+ * Parcela calculaJuro - juro
+ * Item calculaItemFrete - pedido
+
+ */

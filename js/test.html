@@ -1,0 +1,32 @@
+<script src="jquery.js"></script>
+<script>
+    $(function (){
+        var n = 3;
+//        window.alert(123123);
+        $('.btn').click(function(data) {
+//            console.log(data);
+//            console.log($(this).text());
+            $('#coin div:last-child').remove();
+            $('#coin').prepend('<div>'+$(this).text()+'</div>');
+        });
+    });
+    
+    
+</script>
+
+<style>
+    #coin div{float: left; }
+</style>
+<div id="coin">
+    <div>X</div>
+    <div>O</div>
+    <div>O</div>
+    <div>O</div>
+    <div>O</div>
+    <div>O</div>
+    <div>X</div>
+</div>
+<br>
+<button class="btn">O</button>
+<button class="btn">X</button>
+

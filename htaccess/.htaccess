@@ -1,0 +1,8 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine on
+#RewriteBase /
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^[^\.]+\.php$ ../a.php [L,NC]
+RewriteRule ^(/)?$ ../a.php [L]
+
